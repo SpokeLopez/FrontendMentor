@@ -1,0 +1,67 @@
+:root {
+    --background-color: hsl(185, 75%, 39%);
+    --dark-desatured: hsl(229, 23%, 23%);
+    --dark-grayish: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+  }  
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+ }
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    // Para agregar un centrado vertical, el elemento necesita una altura definida
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+
+    &-header{
+        width: 100%;
+        display: block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img{
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+            background-color: white;
+        }
+
+        &-title{
+            font-size: 2rem;
+
+            span{
+                font-weight: 400;
+                color: var(--dark-gray);
+            }
+        }
+    }
+    
+}

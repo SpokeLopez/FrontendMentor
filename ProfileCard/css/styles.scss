@@ -15,7 +15,10 @@ html {
 
 body {
     font-family: 'Kumbh Sans', sans-serif;
-    background-color: hsl(185, 75%, 39%);
+    background-color: var(--background-color);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
 
 h1{
@@ -47,6 +50,11 @@ h1{
         flex-direction: column;
         align-items: center;
 
+        hr{
+            width: 100%;
+            opacity: 0.3;
+        }
+
         &-img{
             border: 5px solid white;
             border-radius: 50%;
@@ -55,11 +63,41 @@ h1{
         }
 
         &-title{
-            font-size: 2rem;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
 
             span{
                 font-weight: 400;
                 color: var(--dark-gray);
+                margin-left: .5rem;
+            }
+        }
+
+        &-city{
+            color: var(--dark-gray);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+
+        &-social{
+            text-align: center;
+            margin-bottom: 2rem;
+
+            h3{
+                font-size: 1.8rem;
+                margin-bottom: 0;
+            }
+
+            p{
+                color: var(--dark-grayish);
+                font-weight: 400;
+                letter-spacing: 1px;
             }
         }
     }

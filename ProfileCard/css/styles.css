@@ -18,7 +18,10 @@ html {
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  background-color: #19a2ae;
+  background-color: var(--background-color);
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
 
 h1 {
@@ -65,6 +68,11 @@ h1 {
           align-items: center;
 }
 
+.card-body hr {
+  width: 100%;
+  opacity: 0.3;
+}
+
 .card-body-img {
   border: 5px solid white;
   border-radius: 50%;
@@ -73,10 +81,43 @@ h1 {
 }
 
 .card-body-title {
-  font-size: 2rem;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
 }
 
 .card-body-title span {
   font-weight: 400;
   color: var(--dark-gray);
+  margin-left: .5rem;
+}
+
+.card-body-city {
+  color: var(--dark-gray);
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card-footer-social {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-footer-social h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.card-footer-social p {
+  color: var(--dark-grayish);
+  font-weight: 400;
+  letter-spacing: 1px;
 }

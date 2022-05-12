@@ -1,0 +1,90 @@
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: var(--bgcolor-card-light);
+    box-shadow: var(--shadow);
+    color: var(--textcolor-light);
+    border-radius: 0.35rem;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--textcolor-light) transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent var(--textcolor-light) transparent;
+    top: 14px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: var(--textcolor-light);
+    padding: 18px 16px;
+    cursor: pointer;
+    height: 52.4px;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    margin-top: 0.3rem;
+    position: absolute;
+    background-color: var(--bgcolor-light);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+        font-size: .7rem;
+    }
+
+    .filter-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    .form-search {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .form-search input{
+        width: 85%;
+    }
+
+}
+  

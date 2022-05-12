@@ -1,0 +1,63 @@
+.widget{
+    display: flex;
+    width: 100%;
+    max-width: 980px;
+    min-width: 320px;
+    background-color: var(--card-background);
+}
+
+.widget__about{
+    padding: 3rem;
+    color: white;
+    flex-basis: 50%;
+}
+
+.widget__title{
+    font-size: 2.5rem;
+}
+
+.widget__title-violet{
+    color: var(--accent-violet);
+}
+
+.widget__description{
+    color: var(--transparent-text);
+    font-size: 1rem;
+}
+
+.widget__chars{
+    display: flex;
+    justify-content: space-around;
+}
+
+.widget__char{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.widget__char-normal{
+    display: block;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: .7rem;
+    font-weight: lighter;
+}
+
+.widget__image{
+    flex-basis: 50%;
+    background-image: url(../images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.widget__image::before{
+    content: "";
+    background-color: hsla(277, 85%, 36%, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,261 @@
+:root {
+    --primay-color: hsl(243, 87%, 12%);
+    --primary-color-desatured: hsl(238, 22%, 44%);
+    --accent-color: hsl(224, 93%, 58%);
+    --accent-moderate-cyan-color: hsl(170, 45%, 43%);
+    --neutral-color-grayish: hsl(240, 75%, 98%);
+    --neutral-color-gray: hsl(0, 0%, 75%);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    height: 100vh;
+}
+
+.nav {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 20px;
+    justify-content: space-between;
+    align-self: center;
+
+}
+
+.nav__link {
+    display: inline-block;
+    color: var(--primary-color-desatured);
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.hero__main {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    color: var(--primay-color);
+    line-height: 1.5;
+}
+
+.hero__texts p {
+    font-size: 1.1rem;
+    color: var(--primay-color);
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.hero__contact {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.hero__input {
+    font-family: 'Raleway', sans-serif;
+    color: var(--neutral-color-gray);
+    padding: 10px 15px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--primary-color-desatured);
+}
+
+.hero__btn {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--neutral-color-grayish);
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 2px 9px var(--neutral-color-gray);
+}
+
+.hero__img {
+    width: 100%;
+}
+
+/*ABOUT SECTION */
+.about{
+    background-color: var(--neutral-color-grayish);
+    padding: 150px 80px;
+}
+
+.about__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "textos textos img img"
+    "card   card    img img";
+    gap: 40px;
+    align-items: center;
+}
+
+.about__title{
+    font-size: 2.5rem;
+    color: var(--primay-color);
+    margin-bottom: 1em;
+}
+
+.about__description{
+    font-family: 'Open Sans', sans-serif;
+    width: 70%;
+    line-height: 1.5;
+    color: var(--primay-color);
+    margin-bottom: 15px;
+}
+
+.about__info{
+    width: 100%;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.about__cta{
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    color: var(--accent-moderate-cyan-color);
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.about__line{
+    margin-top: 2px;
+    color: var(--accent-moderate-cyan-color);
+    background-color: var(--accent-moderate-cyan-color);
+    width: 22%;
+}
+
+.about__cta::after{
+    content: url('../images/icon-arrow.svg');
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.about__card{
+    font-family: 'Open Sans', sans-serif;
+    width: 52%;
+    background-color: #fff;
+    padding: 22px;
+    grid-area: card;
+    box-shadow: 0 0 30px -10px var(--neutral-color-gray);
+    border-radius: 6px;
+}
+
+.about__avatar{
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+.about__information{
+    margin: 0 10px;
+}
+
+.about__name{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.about__position{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.about__testimonial{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.about__quote{
+    width: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.about__img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.about__picture{
+    grid-area: img;
+}
+
+.about__texts{
+    grid-area: textos;
+}
+
+/* SUSCRIBE SECTION */
+.suscribe{
+ background-color: var(--primary-color-desatured);
+ padding: 5px 80px;
+}
+
+.suscribe__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 120px;
+}
+
+.suscribe__title{
+    font-size: 30px;
+    color: var(--neutral-color-grayish);
+    margin-bottom: 25px;
+}
+
+.suscribe__description{
+    color: var(--neutral-color-grayish);
+    font-weight: 400;
+    width: 65%;
+    line-height: 1.5;
+}
+
+.suscribe__form{
+    width: 90%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.suscribe__input{
+    font-family: 'Raleway', sans-serif;
+    color: var(--neutral-color-gray);
+    padding: 10px 15px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--primary-color-desatured);
+    width: 90%;
+}
+
+.suscribe__btn{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--neutral-color-grayish);
+    background-color: var(--accent-color);
+    padding: 15px;
+    border-radius: 3px;
+    border: none;
+    width: 30%;
+    box-shadow: 0 0 3px var(--primay-color);
+}

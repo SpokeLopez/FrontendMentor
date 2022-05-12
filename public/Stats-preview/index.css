@@ -1,0 +1,66 @@
+@import "buttons.css";
+@import "wrapper.css";
+
+:root{
+    --gradiant: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #747DE9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+    --font-base: 'Poppins', sans-serif;
+    --primary-color: #310A90;
+}
+
+body{
+    font-family: var(--font-base);
+    background: var(--gradiant);
+    min-block-size: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero{
+    color: var(--primary-color);
+}
+
+.hero__user{
+    margin: 32px 0 16px 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.hero__welcome{
+    margin: 0;
+    font-size: 24px;
+    line-height: 39px;
+    font-weight: bold;
+}
+
+.hero__presentation{
+    margin: 0;
+    font-size: 48px;
+    line-height: 78px;
+    font-weight: bold;
+    display: block;
+}
+
+@media screen and (min-width: 768px){
+    .hero{
+        display: flex;
+        gap: 32px;
+    }
+    .hero__presentation{
+        max-inline-size: 450px;
+        order: 1;
+    }
+    .hero__user{
+        order: 2;
+        text-align: end;
+        flex: 1;
+    }
+    .hero__user img{
+        inline-size: 500px;
+        block-size: 504px;
+    }
+}
